@@ -1,0 +1,520 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #0C4DA2;
+  color: white;
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .logo .highlight {
+  color: #FDB813;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.75;
+}
+
+/* Active nav link */
+.nav-links a.active {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-title {
+  font-size: 2.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #FDB813;
+}
+
+.btn-secondary {
+  background-color: #0C4DA2;
+}
+
+.btn-primary:hover {
+  background-color: #e0a607;
+}
+
+.btn-secondary:hover {
+  background-color: #08397e;
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 0;
+  background-color: #fff;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #0C4DA2;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: #f0f4fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.feature-card h3 {
+  color: #0C4DA2;
+  margin-bottom: 0.75rem;
+}
+
+.feature-card p {
+  color: #555;
+}
+
+/* Programs page */
+.programs-section {
+  padding: 3rem 0;
+}
+
+.filter-bar {
+  margin-bottom: 1.5rem;
+}
+
+.program-search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.program-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.program-card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.program-card h3 {
+  color: #0C4DA2;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.program-card p {
+  flex: 1;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.btn-primary.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+}
+
+/* Visa page */
+.visa-info {
+  padding: 3rem 0;
+  background-color: #fff;
+}
+
+.visa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.visa-step {
+  background-color: #f0f4fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.visa-step h3 {
+  color: #0C4DA2;
+  margin-bottom: 0.75rem;
+}
+
+/* Accommodation page */
+.housing-list {
+  padding: 3rem 0;
+  background-color: #fff;
+}
+
+.housing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.housing-card {
+  background-color: #f0f4fa;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.housing-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.housing-content {
+  padding: 1rem;
+  flex: 1;
+}
+
+.housing-content h3 {
+  color: #0C4DA2;
+  margin-bottom: 0.5rem;
+}
+
+.housing-content p {
+  color: #555;
+}
+
+/* Partners page */
+.partners-section {
+  padding: 3rem 0;
+  background-color: #fff;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.partner-card {
+  background-color: #f0f4fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.partner-card h3 {
+  color: #0C4DA2;
+  margin-bottom: 0.75rem;
+}
+
+.partner-card ul {
+  list-style: disc inside;
+  padding-left: 0.5rem;
+}
+
+.partner-card li {
+  margin-bottom: 0.5rem;
+}
+
+/* Franchise page */
+.franchise-info {
+  padding: 3rem 0;
+  background-color: #fff;
+}
+
+.franchise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.franchise-card {
+  background-color: #f0f4fa;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.franchise-card h3 {
+  color: #0C4DA2;
+  margin-bottom: 0.75rem;
+}
+
+.franchise-card p {
+  color: #555;
+}
+
+/* CTA Section */
+.cta {
+  background-color: #0C4DA2;
+  color: white;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.cta .btn-secondary {
+  margin-top: 1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #0C4DA2;
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+/* Chatbot Widget */
+#chatbot-container {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 20;
+}
+
+#chatbot-toggle {
+  background-color: #0C4DA2;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+#chatbot-window {
+  width: 300px;
+  max-height: 400px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+#chatbot-header {
+  background-color: #0C4DA2;
+  color: white;
+  padding: 0.75rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#chatbot-messages {
+  flex: 1;
+  padding: 0.75rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#chatbot-messages .message {
+  max-width: 80%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+#chatbot-messages .user {
+  align-self: flex-end;
+  background-color: #0C4DA2;
+  color: white;
+}
+
+#chatbot-messages .bot {
+  align-self: flex-start;
+  background-color: #f0f4fa;
+  color: #333;
+}
+
+#chatbot-form {
+  display: flex;
+}
+
+#chatbot-input {
+  flex: 1;
+  border: none;
+  border-top: 1px solid #ddd;
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+#chatbot-input::placeholder {
+  color: #aaa;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Apply Form Styles */
+.apply-section {
+  padding: 3rem 0;
+}
+
+.apply-form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.apply-form .form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.apply-form .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-form .form-group.full {
+  flex-basis: 100%;
+}
+
+.apply-form label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #0C4DA2;
+}
+
+.apply-form input[type="text"],
+.apply-form input[type="email"],
+.apply-form input[type="file"],
+.apply-form select,
+.apply-form textarea {
+  padding: 0.65rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.apply-form textarea {
+  resize: vertical;
+}
+
+.apply-form button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #FDB813;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.apply-form button:hover {
+  background-color: #e0a607;
+}
+
+.success-message {
+  background-color: #e6f4ea;
+  color: #1a7f37;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-top: 1.5rem;
+}

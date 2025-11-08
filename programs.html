@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs – SchoolAbroad.eu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="chatbot.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">SchoolAbroad<span class="highlight">.eu</span></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="programs.html" class="active">Programs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="visa.html">Visa</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="franchise.html">Franchise</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <section class="page-header">
+      <div class="container">
+      <h1 class="section-title">Explore Programs</h1>
+      <p>Find the right program for your goals. Browse by subject area, degree level and country.</p>
+      </div>
+    </section>
+    <section class="programs-section">
+      <div class="container">
+        <div class="filter-bar">
+          <input type="text" id="program-search" placeholder="Search programs…" class="program-search-input">
+        </div>
+        <div id="program-list" class="program-list">
+          <!-- Sample program cards -->
+          <div class="program-card">
+            <h3>Bachelor in Computer Science</h3>
+            <p>Offered in Germany, Netherlands</p>
+            <a href="apply.html" class="btn-primary small">Apply</a>
+          </div>
+          <div class="program-card">
+            <h3>Master in Business Administration (MBA)</h3>
+            <p>Offered in Spain, France</p>
+            <a href="apply.html" class="btn-primary small">Apply</a>
+          </div>
+          <div class="program-card">
+            <h3>Vocational Diploma in Hospitality Management</h3>
+            <p>Offered in Italy, Switzerland</p>
+            <a href="apply.html" class="btn-primary small">Apply</a>
+          </div>
+          <div class="program-card">
+            <h3>Intensive English Language Course</h3>
+            <p>Offered in Ireland, Malta</p>
+            <a href="apply.html" class="btn-primary small">Apply</a>
+          </div>
+          <!-- More program cards could be added here -->
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> SchoolAbroad.eu. All rights reserved.</p>
+      <p>Learn Without Borders. Live With Purpose.</p>
+    </div>
+  </footer>
+  <!-- AI Chatbot Widget -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" title="Chat with our AI assistant">💬</button>
+    <div id="chatbot-window" class="hidden">
+      <div id="chatbot-header">AI Assistant</div>
+      <div id="chatbot-messages"></div>
+      <form id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything…" autocomplete="off" required>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Simple search filter
+    const searchInput = document.getElementById('program-search');
+    const programCards = document.querySelectorAll('.program-card');
+    searchInput.addEventListener('input', () => {
+      const value = searchInput.value.toLowerCase();
+      programCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(value) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

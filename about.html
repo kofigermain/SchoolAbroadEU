@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us – SchoolAbroad.eu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="chatbot.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">SchoolAbroad<span class="highlight">.eu</span></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="visa.html">Visa</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="franchise.html">Franchise</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <section class="page-header">
+      <div class="container">
+        <h1 class="section-title">About SchoolAbroad.eu</h1>
+        <p>Learn about our mission, vision and the team behind the platform.</p>
+      </div>
+    </section>
+    <section class="about-section">
+      <div class="container">
+        <h2>Our Mission</h2>
+        <p>We believe education should be accessible across borders. Our mission is to make studying in Europe seamless by leveraging cutting‑edge AI and a trusted network of partners. From matching programs to booking accommodation, we streamline every step of the student journey.</p>
+        <h2>Our Story</h2>
+        <p>SchoolAbroad.eu began as a collaboration between education enthusiasts, AI experts and international students who experienced first‑hand the challenges of applying to schools abroad. Today, we serve applicants from dozens of countries, helping them achieve their academic dreams with personalised guidance and local support.</p>
+        <h2>Our Team</h2>
+        <p>We are a diverse group of developers, educators and support specialists spanning Europe and Africa. Together, we build technology that empowers students and empowers our local partners. Interested in joining us? Reach out through our contact page.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> SchoolAbroad.eu. All rights reserved.</p>
+      <p>Learn Without Borders. Live With Purpose.</p>
+    </div>
+  </footer>
+  <!-- AI Chatbot Widget -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" title="Chat with our AI assistant">💬</button>
+    <div id="chatbot-window" class="hidden">
+      <div id="chatbot-header">AI Assistant</div>
+      <div id="chatbot-messages"></div>
+      <form id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything…" autocomplete="off" required>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

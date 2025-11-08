@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SchoolAbroad.eu – Learn Without Borders</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="chatbot.js"></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">SchoolAbroad<span class="highlight">.eu</span></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="visa.html">Visa</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="franchise.html">Franchise</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="c1b266d9-5f7a-42cd-9695-de54c5b48748.png" alt="Students exploring Europe" class="hero-image">
+    <div class="hero-content">
+      <h1 class="hero-title">From Admission to Arrival</h1>
+      <p class="hero-subtitle">Your pathway to study, live and thrive in Europe</p>
+      <a href="apply.html" class="btn-primary">Start Your Journey</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why SchoolAbroad.eu?</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>AI‑Powered Guidance</h3>
+          <p>Our intelligent assistant matches you to programs, generates visa checklists and supports you every step of the way.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Seamless Application</h3>
+          <p>Apply to multiple European schools with a single form and track your status in real time.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Trusted Partners</h3>
+          <p>We work with accredited universities, language schools and vocational centres across Europe.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Accommodation & Arrival</h3>
+          <p>Book student housing, airport pickup and local orientation through our platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="section-title">Ready to begin?</h2>
+      <p>Join students from around the world who trust SchoolAbroad.eu for their European journey.</p>
+      <a href="apply.html" class="btn-secondary">Apply Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> SchoolAbroad.eu. All rights reserved.</p>
+      <p>Learn Without Borders. Live With Purpose.</p>
+    </div>
+  </footer>
+
+  <!-- AI Chatbot Widget -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" title="Chat with our AI assistant">💬</button>
+    <div id="chatbot-window" class="hidden">
+      <div id="chatbot-header">AI Assistant</div>
+      <div id="chatbot-messages"></div>
+      <form id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything…" autocomplete="off" required>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Populate current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

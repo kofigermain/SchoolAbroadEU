@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partners – SchoolAbroad.eu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="chatbot.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">SchoolAbroad<span class="highlight">.eu</span></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="visa.html">Visa</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="partners.html" class="active">Partners</a></li>
+          <li><a href="franchise.html">Franchise</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <section class="page-header">
+      <div class="container">
+        <h1 class="section-title">Our Partners</h1>
+        <p>We collaborate with accredited universities, language institutes and vocational centres to bring you a wide range of study opportunities.</p>
+      </div>
+    </section>
+    <section class="partners-section">
+      <div class="container">
+        <div class="partners-grid">
+          <div class="partner-card">
+            <h3>Universities</h3>
+            <ul>
+              <li>Europe Business University</li>
+              <li>Madrid Polytechnic Institute</li>
+              <li>Paris School of Technology</li>
+            </ul>
+          </div>
+          <div class="partner-card">
+            <h3>Language Schools</h3>
+            <ul>
+              <li>Dublin English Academy</li>
+              <li>Berlin Sprachschule</li>
+              <li>Malta Language Hub</li>
+            </ul>
+          </div>
+          <div class="partner-card">
+            <h3>Vocational Centres</h3>
+            <ul>
+              <li>Swiss Hospitality Institute</li>
+              <li>Florence Culinary College</li>
+              <li>Lisbon Tech Bootcamp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container">
+        <h2 class="section-title">Become a partner</h2>
+        <p>If you represent an institution that would like to join our network, get in touch to learn more about partnership opportunities.</p>
+        <a href="contact.html" class="btn-secondary">Contact Us</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> SchoolAbroad.eu. All rights reserved.</p>
+      <p>Learn Without Borders. Live With Purpose.</p>
+    </div>
+  </footer>
+  <!-- AI Chatbot Widget -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" title="Chat with our AI assistant">💬</button>
+    <div id="chatbot-window" class="hidden">
+      <div id="chatbot-header">AI Assistant</div>
+      <div id="chatbot-messages"></div>
+      <form id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything…" autocomplete="off" required>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

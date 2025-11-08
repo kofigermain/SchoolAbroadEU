@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply – SchoolAbroad.eu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="chatbot.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">SchoolAbroad<span class="highlight">.eu</span></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="apply.html" class="active">Apply</a></li>
+          <li><a href="visa.html">Visa</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="franchise.html">Franchise</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <section class="page-header">
+      <div class="container">
+        <h1 class="section-title">Application Form</h1>
+        <p>Fill out a single application and our AI will match you with the best programs.</p>
+      </div>
+    </section>
+    <section class="apply-section">
+      <div class="container">
+        <form id="apply-form" class="apply-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="lastName" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="country">Country of Residence</label>
+              <input type="text" id="country" name="country" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="program">Program of Interest</label>
+              <select id="program" name="program" required>
+                <option value="" disabled selected>Select a program</option>
+                <option value="cs">Bachelor in Computer Science</option>
+                <option value="mba">Master in Business Administration</option>
+                <option value="hospitality">Vocational Diploma in Hospitality Management</option>
+                <option value="english">Intensive English Language Course</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="documents">Academic Documents (optional)</label>
+              <input type="file" id="documents" name="documents" multiple>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group full">
+              <label for="message">Additional Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your study goals…"></textarea>
+            </div>
+          </div>
+          <div class="form-row">
+            <button type="submit" class="btn-primary">Submit Application</button>
+          </div>
+        </form>
+        <div id="form-success" class="hidden success-message">Thank you! Your application has been submitted. Our AI is reviewing your profile and will contact you soon.</div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> SchoolAbroad.eu. All rights reserved.</p>
+      <p>Learn Without Borders. Live With Purpose.</p>
+    </div>
+  </footer>
+  <!-- AI Chatbot Widget -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" title="Chat with our AI assistant">💬</button>
+    <div id="chatbot-window" class="hidden">
+      <div id="chatbot-header">AI Assistant</div>
+      <div id="chatbot-messages"></div>
+      <form id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything…" autocomplete="off" required>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Handle application form submission
+    const applyForm = document.getElementById('apply-form');
+    const successMessage = document.getElementById('form-success');
+    applyForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // In a real system, you would send data to the server here
+      applyForm.classList.add('hidden');
+      successMessage.classList.remove('hidden');
+      // Scroll to show message
+      successMessage.scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

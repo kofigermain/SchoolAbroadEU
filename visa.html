@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visa & Document Prep – SchoolAbroad.eu</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="chatbot.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">SchoolAbroad<span class="highlight">.eu</span></a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="apply.html">Apply</a></li>
+          <li><a href="visa.html" class="active">Visa</a></li>
+          <li><a href="accommodation.html">Accommodation</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="franchise.html">Franchise</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page-content">
+    <section class="page-header">
+      <div class="container">
+        <h1 class="section-title">Visa & Document Preparation</h1>
+        <p>Navigate the visa process with confidence. Our AI prepares a personalised checklist based on your country and program.</p>
+      </div>
+    </section>
+    <section class="visa-info">
+      <div class="container">
+        <div class="visa-grid">
+          <div class="visa-step">
+            <h3>Step 1: Offer Letter</h3>
+            <p>Once you receive your offer from an institution, you will need to confirm your acceptance and pay any initial deposits.</p>
+          </div>
+          <div class="visa-step">
+            <h3>Step 2: AI Checklist</h3>
+            <p>Our AI analyses your profile and generates a country-specific list of documents required for your visa application.</p>
+          </div>
+          <div class="visa-step">
+            <h3>Step 3: Appointment Booking</h3>
+            <p>We help schedule your embassy appointment and prepare you for the interview. You can track your progress online.</p>
+          </div>
+          <div class="visa-step">
+            <h3>Step 4: Arrival & Residence</h3>
+            <p>After approval, we assist with arrival logistics, including accommodation, SIM cards and orientation sessions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta">
+      <div class="container">
+        <h2 class="section-title">Stay ahead of your visa process</h2>
+        <p>Sign in to your application dashboard to see your personalised checklist and next steps.</p>
+        <a href="apply.html" class="btn-secondary">Access Dashboard</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> SchoolAbroad.eu. All rights reserved.</p>
+      <p>Learn Without Borders. Live With Purpose.</p>
+    </div>
+  </footer>
+  <!-- AI Chatbot Widget -->
+  <div id="chatbot-container">
+    <button id="chatbot-toggle" title="Chat with our AI assistant">💬</button>
+    <div id="chatbot-window" class="hidden">
+      <div id="chatbot-header">AI Assistant</div>
+      <div id="chatbot-messages"></div>
+      <form id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Ask me anything…" autocomplete="off" required>
+      </form>
+    </div>
+  </div>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
